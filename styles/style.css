@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Helvetica Neue 93';
+  src: url('../font/HelveticaNeueLTStd-BlkEx.otf');
+}
+
+/* MAIN  */
+
+#work-html {
+  background-color: #d1d1ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', 'Arial';
+  font-weight: medium;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+h1, .main-title {
+  font-family: 'Helvetica Neue 93';
+  text-transform: uppercase;
+  font-size: 2.25em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:100vh;
+  width:100vw;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  background-color: white;
+}
+
+.home-container {
+  background-color: #fdbae8;
+}
+
+.work-container {
+  background-color: #d1d1ff;
+}
+
+nav {
+  min-width: 650px;
+  margin-top: 3em;
+}
+
+/* ABOUT */
+
+.infos, .links {
+  margin-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  width:60vw;
+}
+.infos p {
+  text-align: left;
+  line-height: 35px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.pdp-ben {
+  height:100%;
+}
+.links a, .infos a {
+  border-bottom: 1px solid transparent;
+}
+.links a:hover, .infos a:hover{
+  border-bottom: 1px solid black;
+}
+
+/* BUTTONS */
+
+.double-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+
+.button {
+  font-size: 1.5em;
+}
+
+.button-small {
+  width: 25%;
+}
+
+.button {
+  padding: 0.6em 2em;
+  border: 3.15px solid black;
+  text-transform: uppercase;
+  display: block;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: black;
+  color: #fdbae8;
+}
+
+/* HOME RESPONSIVE */
+
+@media screen and (max-width:650px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  .button {
+    font-size: 1em;
+    width:300px;
+    margin:0.5em;
+  }
+  .double-buttons {
+    flex-direction: column;
+    margin-bottom: 0em;
+  }
+  nav {
+    min-width: 350px;
+  }
+}
