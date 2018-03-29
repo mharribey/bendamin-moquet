@@ -24,7 +24,9 @@ h1, .main-title {
   font-size: 2.25em;
   margin:0;
 }
-
+.about-title {
+  margin:1em 0;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -34,7 +36,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height:100vh;
+  min-height:100vh;
   width:100vw;
   text-align: center;
   margin: auto;
@@ -58,24 +60,32 @@ nav {
 /* ABOUT */
 
 .infos, .links {
-  margin-top: 5em;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  width:60vw;
+  width:55vw;
+  margin: auto;
 }
+
+.infos {
+  margin:3em 0 0;
+}
+
 .infos p {
+  width:25vw;
   text-align: left;
   line-height: 35px;
   letter-spacing: 2px;
-  margin: 0;
+  margin: 0 auto;
 }
 .pdp-ben {
   height:100%;
+  margin: 0 auto 0;
 }
 .links a, .infos a {
+  margin: 1em 0;
   border-bottom: 1px solid transparent;
+  border-width: 100%;
 }
 .links a:hover, .infos a:hover{
   border-bottom: 1px solid black;
@@ -116,7 +126,7 @@ nav {
 @media screen and (max-width:650px) {
   h1 {
     font-size: 1.8em;
-    margin:0.5em 0;
+    margin:1em 0;
   }
   .button {
     font-size: 1em;
@@ -129,5 +139,22 @@ nav {
   }
   nav {
     min-width: 350px;
+  }
+}
+
+/* ABOUT RESPONSIVE */
+
+@media screen and (max-width:1000px) {
+  .pdp-ben {
+    margin:1.5em auto;
+  }
+  .infos p, .infos, .links {
+    width:70vw;
+  }
+  .infos {
+    flex-direction: column;
+  }
+  .infos p {
+    line-height: 20px;
   }
 }

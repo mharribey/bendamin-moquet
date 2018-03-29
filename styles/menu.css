@@ -16,10 +16,10 @@
 #menuToggle input
 {
   display: block;
-  width: 40px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  top: -7px;
+  top: -5px;
   right: -5px;
 
   cursor: pointer;
@@ -76,7 +76,7 @@
 #menuToggle input:checked ~ span
 {
   opacity: 1;
-  transform: rotate(45deg) translate(-5px, 1px);
+  transform: rotate(45deg) translate(-5px, 0px);
   background: #232323;
 }
 
@@ -94,7 +94,7 @@
  */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
-  transform: rotate(-45deg) translate(0, -8px);
+  transform: rotate(-45deg) translate(2px, -8px);
 }
 
 /*
@@ -103,21 +103,26 @@
  */
 #menu
 {
-  position: absolute;
-  margin: -100px 0 0 -70px;
-  padding-top: 125px;
+  margin: -110px 0 0 -80px;
+  padding:125px 20px 0;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
 
+  background: white;
   transform-origin: 0% 0%;
-  transform: translate(130%, 0);
+  transform: translate(150%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
+#menu.menu-work {
+  background: #d1d1ff;
+}
+
 #menu li
 {
+  width:100%;
   padding: 10px 0;
   font-size: 22px;
 }
@@ -132,5 +137,8 @@
 
 
 @media screen and (max-width:650px) {
-  
+  #menuToggle {
+    top: 20px;
+    right:20px;
+  }
 }
