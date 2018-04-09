@@ -21,12 +21,25 @@ body {
 h1, .main-title {
   font-family: 'Helvetica Neue 93';
   text-transform: uppercase;
-  font-size: 2.25em;
+  font-size: 2.5em;
   margin:0;
 }
-.about-title {
-  margin:1em 0;
+
+.main-title {
+  font-size: 3em;
 }
+
+.scroll {
+  position: absolute;
+  bottom:17px;
+}
+.about-title {
+  margin:2em 0 1em;
+}
+.work-title {
+  margin: 1em 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -83,9 +96,11 @@ nav {
   margin: 0 auto 0;
 }
 .links a, .infos a {
+  font-family: 'Helvetica Neue 93';
   margin: 1em 0;
   border-bottom: 1px solid transparent;
   border-width: 100%;
+  font-size:
 }
 .links a:hover, .infos a:hover{
   border-bottom: 1px solid black;
@@ -121,16 +136,39 @@ nav {
   color: #fdbae8;
 }
 
+/* WORK */
+
+.projets {
+  margin:2em 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.projets h3 {
+  font-weight: 400;
+  font-size: 1.7em;
+  margin:0;
+  margin-bottom: 0.2em;
+}
+.projets h3:hover {
+  text-transform: lowercase;
+}
+.projets p {
+  font-weight: 200;
+  margin:0;
+}
+
 /* HOME RESPONSIVE */
 
 @media screen and (max-width:650px) {
   h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin:1em 0;
   }
   .button {
     font-size: 1em;
-    width:300px;
+    width:270px;
     margin:0.5em;
   }
   .double-buttons {
@@ -138,6 +176,7 @@ nav {
     margin-bottom: 0em;
   }
   nav {
+    margin-top: 2em;
     min-width: 350px;
   }
 }
@@ -150,6 +189,9 @@ nav {
   }
   .infos p, .infos, .links {
     width:70vw;
+  }
+  .links a {
+    font-size: 0.8em;
   }
   .infos {
     flex-direction: column;
